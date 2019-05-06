@@ -19,7 +19,7 @@ The Basic idea is to do an exploratory data analysis and try to select the best 
 After an [Exploratory Data Analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis) through graphical representations and calculating the RMSE's, we have found that the best features for predicting the __ratings__ was __movieId__ and __userId.__  
 All the other features (movie age, genre, timestamp, title) did not seem to change the RMSE's final value based on the approaches we have taken considering the hardware limitations.
 
-The final RMSE is 0.8251770  
+The final RMSE is 0.8567039  
 
 For the full R code of this project please visit this [link](https://github.com/enioljr/Hx_Capstone).  
 
@@ -539,12 +539,12 @@ rbind(rmse_table, rmse_val_table) %>% knitr::kable(caption = "RMSEs Summary")
 ``` 
 
 The better RMSE is achieved with the **Movie Effect + User Effect + Penalized Least Squares** model. However, this RMSE only obtained on the test set.  
-For model performance reasons we consider what we have obtained from unseeing data on the *validation set (test set)*. The RMSE that has the best performance is the __Movie Effect + User Effect__ and will be considered our definitive model. This RMSE is obtained when λ = 0.5 which lets us to achieve a RMSE equal to 0.8251770.  
+For model performance reasons we consider what we have obtained from unseeing data on the *validation set (test set)*. The RMSE that has the best performance is the __Movie Effect + User Effect__ and will be considered our definitive model. This RMSE is obtained when λ = 0.5 which lets us to achieve a RMSE equal to 0.8251770 on the validation set.  
 
 ## CONCLUSION  
 
 The *userId* and *movieId* variables have sufficient predictive power to permit us predict how a user will rate a movie.  
-The RMSE equal to 0.8251770 can be considered satisfactory since we have few predictors. Both User and Movie effects carry enough predictive power to forecast the rating that will be given to a movie by a specific user.  
+The RMSE equal to 0.8567039 can be considered satisfactory since we have few predictors. Both User and Movie effects carry enough predictive power to forecast the rating that will be given to a movie by a specific user.  
 
 ## *Remarks*  
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="Enio Linhares Jr." />
 
-<meta name="date" content="2019-04-24" />
+<meta name="date" content="2019-04-30" />
 
 <title>HarvardX MovieLens Capstone Project</title>
 
@@ -204,7 +204,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">HarvardX MovieLens Capstone Project</h1>
 <h4 class="author"><em>Enio Linhares Jr.</em></h4>
-<h4 class="date"><em>2019-04-24</em></h4>
+<h4 class="date"><em>2019-04-30</em></h4>
 
 </div>
 
@@ -215,7 +215,7 @@ $(document).ready(function () {
 <p>The Basic idea is to do an exploratory data analysis and try to select the best features that have more impact when creating an algorithm to recommend a movie.</p>
 <p>After an <a href="https://en.wikipedia.org/wiki/Exploratory_data_analysis">Exploratory Data Analysis</a> through graphical representations and calculating the RMSE’s, we have found that the best features for predicting the <strong>ratings</strong> was <strong>movieId</strong> and <strong>userId.</strong><br />
 All the other features (movie age, genre, timestamp, title) did not seem to change the RMSE’s final value based on the approaches we have taken considering the hardware limitations.</p>
-<p>The final RMSE is 0.82517697</p>
+<p>The final RMSE is 0.8567039</p>
 <p>For the full R code of this project please visit this <a href="https://github.com/enioljr/Hx_Capstone">link</a>.</p>
 </div>
 <div id="the-data-set" class="section level2">
@@ -1122,13 +1122,13 @@ rmse_val_table %&gt;% knitr::kable(caption = &quot;RMSEs on validation data&quot
 </tbody>
 </table>
 <p>The better RMSE is achieved with the <strong>Movie Effect + User Effect + Penalized Least Squares</strong> model. However, this RMSE only obtained on the test set.<br />
-For model performance reasons we consider what we have obtained from unseeing data on the <em>validation set (test set)</em>. The RMSE that has the best performance is the <strong>Movie Effect + User Effect</strong> and will be considered our definitive model. This RMSE is obtained when λ = 0.5 which lets us to achieve a RMSE equal to 0.82517697.</p>
+For model performance reasons we consider what we have obtained from unseeing data on the <em>validation set (test set)</em>. The RMSE that has the best performance is the <strong>Movie Effect + User Effect</strong> and will be considered our definitive model. This RMSE is obtained when λ = 0.5 which lets us to achieve a RMSE equal to 0.8251770 on the validation set.</p>
 </div>
 </div>
 <div id="conclusion" class="section level2">
 <h2>CONCLUSION</h2>
 <p>The <em>userId</em> and <em>movieId</em> variables have sufficient predictive power to permit us predict how a user will rate a movie.<br />
-The RMSE equal to 0.82517697 can be considered satisfactory since we have few predictors. Both User and Movie effects carry enough predictive power to forecast the rating that will be given to a movie by a specific user.</p>
+The RMSE equal to 0.8567039 can be considered satisfactory since we have few predictors. Both User and Movie effects carry enough predictive power to forecast the rating that will be given to a movie by a specific user.</p>
 </div>
 <div id="remarks" class="section level2">
 <h2><em>Remarks</em></h2>
